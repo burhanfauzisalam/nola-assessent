@@ -8,12 +8,6 @@ const app = express();
 app.use(cors());
 const PORT = process.env.PORT || 5000;
 
-// Buat folder uploads jika belum ada
-const uploadDir = "files";
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir);
-}
-
 // Konfigurasi multer
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
