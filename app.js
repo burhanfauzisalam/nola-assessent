@@ -17,7 +17,7 @@ if (!fs.existsSync(uploadDir)) {
 // Konfigurasi multer
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "files/"); // Simpan file di folder 'uploads'
+    cb(null, "files/"); // Simpan file di folder 'files'
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname); // Simpan file dengan nama asli
